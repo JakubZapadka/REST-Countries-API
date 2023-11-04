@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Frontendmentor files
+rest-countries-api-with-color-theme-switcher-master

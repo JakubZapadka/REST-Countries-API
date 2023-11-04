@@ -14,8 +14,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,6 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
+(./img/desktop-preview.png)
+
 ## My process
 
 ### Links
@@ -45,14 +45,11 @@ Users should be able to:
 - [Vite](https://vitejs.dev/) - Vite
 - [Vue](https://vuejs.org/) - Vue
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### Useful resources
 
 - [stackoverflow](https://stackoverflow.com/questions/67166361/why-does-an-object-change-into-a-proxy-object-in-vue) - I had difficulty operating on data from an API because I didn't know that Vue converts objects into proxy objects, which don't have methods like map and filter.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/JakubZapadka)
+- Frontend Mentor - [@jakubzapadka](https://www.frontendmentor.io/profile/JakubZapadka)
