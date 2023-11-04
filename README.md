@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-(./img/desktop-preview.png)
+![](./img/desktop-preview.png)
 
 ## My process
 
