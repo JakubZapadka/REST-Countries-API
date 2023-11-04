@@ -20,7 +20,7 @@ export default {
                         //console.log(this.data)
                     })
                 }else{
-                    console.log(response)
+                    //console.log(response)
                     this.error = response
                 }
             })
@@ -146,6 +146,7 @@ export default {
         padding: 0.5rem 1rem;
         gap: 1rem;
         width: min-content;
+        cursor: pointer;
     }
     img{
         max-width: 100%;

@@ -48,12 +48,12 @@ export default {
     <main v-if="data">
         <div class="input_a_select">
             <div class="input">
-                <button @click="filtrData">
+                <button @click="filtrData" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <input @keyup.enter="filtrData" @keypress="handleKeyPress" v-model="search" label="Search" type="text" name="" id="countryInput" placeholder="Search for a country...">
             </div>
-            <select name="region" id="region" @change="filtrData">
+            <select name="region" id="region" @change="filtrData" aria-label="chose a region">
                 <option value="" style="display: none;">Filter by Region</option>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
@@ -70,13 +70,13 @@ export default {
                         <h2>{{ object.name.common }}</h2>
                         <div>
                             <p>
-                                <label>Population: </label><span>{{ object.population }}</span>
+                                <span class="label">Population: </span><span>{{ object.population }}</span>
                             </p>
                             <p>
-                                <label>Region: </label><span>{{ object.region }}</span>
+                                <span class="label">Region: </span><span>{{ object.region }}</span>
                             </p>
                             <p>
-                                <label>Capital: </label><span v-for="capital in object.capital">{{ capital }}</span>
+                                <span class="label">Capital: </span><span v-for="capital in object.capital">{{ capital }}</span>
                             </p>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ export default {
         border-radius: 0.5rem 0rem 0rem 0.5rem;
     }
     .input [type="text"]{
-        width: -webkit-fill-available;
+        flex-grow: 1;
         border-radius: 0rem 0.5rem 0.5rem 0rem;
     }
 
@@ -166,7 +166,7 @@ export default {
     #region::after{
         margin-right: 1rem;
     }
-    label{
+    .label{
         font-weight: 600;
     }
     .input, select, ul > li{
