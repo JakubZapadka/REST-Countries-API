@@ -43,9 +43,11 @@ export default {
 <template>
     <main>
         <div v-if="data" class="container">
-            <button @click="this.$router.back()"><i class="fa-solid fa-arrow-left"></i> Back</button>
             <div class="container__box">
-                <img :src='data.flags.svg' alt="Flag"> 
+                <div class="container__box__img">
+                    <button @click="this.$router.back()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                    <img :src='data.flags.svg' alt="Flag"> 
+                </div>
                 <div class="container__box__details">
                     <h2>
                         {{ data.name.common }}
@@ -121,9 +123,9 @@ export default {
                     <div>
                         <label v-if="data.borders"><h3>Border Countries:</h3></label>
                         <div class="block_box">
-                            <span v-for="country in data.borders" class="block_box__block">
+                            <a v-for="country in data.borders" class="block_box__block">
                                 {{ country }}
-                            </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -149,9 +151,10 @@ export default {
         cursor: pointer;
     }
     img{
-        max-width: 100%;
+        margin-top: 1rem;
         aspect-ratio: 16 / 9;
         object-fit: cover;
+        max-width: 100%;
     }
     #error{
         text-align: center;
@@ -166,13 +169,20 @@ export default {
         gap: 1rem;
         flex-wrap: wrap;
     }
+    .container{
+        align-items: center;
+    }
     .container__box{
         justify-content: center;
+        max-width: fit-content;
     }
     .container, .container__box, .container__box__details{
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+    .container__box__img{
+        max-width: 512px;
     }
     .container__box__details{
         width: fit-content;
@@ -198,8 +208,8 @@ export default {
         .container__box{
             flex-direction: row;
         }
-        .container__box > img{
-            width: 50%;
+        .container__box__details{
+            margin-top: 3rem;
         }
     }
 </style>
