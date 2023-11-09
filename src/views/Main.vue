@@ -51,7 +51,7 @@ export default {
                 <button @click="filtrData" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <input @keyup.enter="filtrData" @keypress="handleKeyPress" v-model="search" label="Search" type="text" name="" id="countryInput" placeholder="Search for a country...">
+                <input @keyup.enter="filtrData" @keypress="handleKeyPress" v-model="search" type="text" name="Search" id="countryInput" placeholder="Search for a country...">
             </div>
             <select name="region" id="region" @change="filtrData" aria-label="chose a region">
                 <option value="" style="display: none;">Filter by Region</option>
