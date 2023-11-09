@@ -166,10 +166,16 @@ export default {
         gap: 1rem;
         flex-wrap: wrap;
     }
+    .container__box{
+        justify-content: center;
+    }
     .container, .container__box, .container__box__details{
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+    .container__box__details{
+        width: fit-content;
     }
     h3, label{
         margin-bottom: 1rem;
@@ -177,7 +183,7 @@ export default {
     }
 
     button, .block_box__block{
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
     }
     @media screen and (min-width: 1024px) {
         main{
@@ -192,7 +198,7 @@ export default {
         .container__box{
             flex-direction: row;
         }
-        .container__box > img, .container__box__details{
+        .container__box > img{
             width: 50%;
         }
     }

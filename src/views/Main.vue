@@ -27,7 +27,7 @@ export default {
     },
     handleKeyPress(){
         window.clearTimeout(this.timer);
-    }
+    },
   },
   computed: {
     combinedObject() {
@@ -39,7 +39,7 @@ export default {
         window.clearTimeout(this.timer);
         this.timer = window.setTimeout(() => {
             this.filtrData();
-        }, 300); // 1 sec delay
+        }, 300);
       },
     },
 };
@@ -105,13 +105,18 @@ export default {
         flex-direction: column;
         border-radius: 0.5rem;
         overflow: hidden;
-        background-color: var(--elements);
         width: 300px;
+        background-color: var(--elements-hover);
+        transition: background-color 0.1s ease-in-out;
+    }
+    li:hover{
+        background-color: var(--elements);
     }
 
     li > a{
         text-decoration: none;
         color: var(--text);
+        height: 100%;
     }
 
     li > a > img{
@@ -150,6 +155,9 @@ export default {
     .input [type="text"]{
         flex-grow: 1;
         border-radius: 0rem 0.5rem 0.5rem 0rem;
+    }
+    .input [type="text"]::placeholder{
+        color: var(--text);
     }
 
     ul > p{

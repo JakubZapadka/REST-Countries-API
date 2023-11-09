@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
     <header>
-        <router-link :to="'/'">
+        <router-link :to="'/'" aria-label="Home page">
             <h1>Where in the world?</h1>
         </router-link>
         <button @click="toogleDarkTheme">
@@ -24,7 +24,7 @@ export default {
         justify-content: space-between;
         padding: 2rem 1rem;
         background-color: var(--elements);
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
     }
     header > button{
         align-self: center;

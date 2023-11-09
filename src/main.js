@@ -1,11 +1,11 @@
 import { createApp } from 'vue'
 import {createRouter, createWebHistory} from 'vue-router'
 
-import './style.css'
+import './assets/style.css'
 import App from './App.vue'
 
-import Main from './components/Main.vue'
-import Details from './components/Details.vue'
+import Main from './views/Main.vue'
+import Details from './views/Details.vue'
 
 const router = createRouter({
     history: createWebHistory(),
